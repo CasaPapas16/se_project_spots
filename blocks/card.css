@@ -25,6 +25,11 @@
   opacity: 40%;
 }
 
+.card__like-btn:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
+
 .card__title {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;

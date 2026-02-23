@@ -51,6 +51,11 @@
   display: flex;
 }
 
+.profile__edit-btn:hover {
+  color: #212121;
+  cursor: pointer;
+}
+
 .profile__add-btn {
   display: flex;
   margin-left: auto;
@@ -67,6 +72,11 @@
   justify-content: center;
   align-items: center;
   border-radius: 8px;
+}
+
+.profile__add-btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .profile__plus-btn {
