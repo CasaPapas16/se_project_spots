@@ -15,20 +15,49 @@
 
 .profile__name {
   margin: 0 0 12px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 100%;
 }
 
 .profile__description {
   margin: 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #212121;
+  opacity: 70%;
 }
 
 .profile__edit-btn {
   margin-top: auto;
-  background-color: #e4dfdf;
-  color: grey;
+  border-style: none;
+  background-color: #fcf5e5;
+  display: flex;
+  flex-direction: row;
 }
 
 .profile__add-btn {
+  display: flex;
   margin-left: auto;
-  background-color: #000;
-  color: #fff;
+  width: 149px;
+  height: 52px;
+  background-color: #212121;
+  color: #fcf5e5;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  align-self: flex-end;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.profile__plus-btn {
+  width: 12px;
+  height: 12px;
+  display: flex;
 }
