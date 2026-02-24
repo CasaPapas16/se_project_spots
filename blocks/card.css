@@ -4,10 +4,11 @@
 
 .card__image {
   height: 413px;
-  width: 100%;
+  width: 413px;
   object-fit: cover;
   display: block;
-  border-radius: 15px;
+  border-radius: 8px;
+  margin-bottom: 12px;
 }
 
 .card__content {
@@ -23,11 +24,11 @@
   border: none;
   background-color: transparent;
   opacity: 40%;
+  cursor: pointer;
 }
 
 .card__like-btn:hover {
   opacity: 100%;
-  cursor: pointer;
 }
 
 .card__title {
@@ -40,10 +41,16 @@
   text-overflow: ellipsis;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  margin: 0;
 }
 
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;
+    width: 288px;
+  }
+
+  .card__content {
+    width: 288px;
   }
 }
