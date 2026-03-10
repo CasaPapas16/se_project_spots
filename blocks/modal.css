@@ -41,6 +41,7 @@
   border-style: none;
   cursor: pointer;
   background-image: url(../images/Close\ Icon.png);
+  background-color: #fff;
 }
 
 .modal__close-btn:hover {
