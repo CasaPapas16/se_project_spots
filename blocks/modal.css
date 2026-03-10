@@ -13,7 +13,7 @@
   padding: 10px;
   transition:
     opacity 0.3s ease,
-    visibility 0s linear 0.3s;
+    visibility 0.3s linear;
 }
 
 .modal_is-opened {
@@ -40,29 +40,12 @@
   opacity: 0.4;
   border-style: none;
   cursor: pointer;
+  background-image: url(../images/Close\ Icon.png);
 }
 
 .modal__close-btn:hover {
   opacity: 0.8;
   cursor: pointer;
-}
-
-.modal__close-btn span {
-  position: absolute;
-  width: 30px;
-  height: 3px;
-  background-color: #212121;
-  border-radius: 3px;
-}
-
-.modal__close-btn span:first-child {
-  transform: rotate(45deg);
-  border: 2px;
-}
-
-.modal__close-btn span:last-child {
-  transform: rotate(-45deg);
-  border: 2px;
 }
 
 .modal__title {
@@ -93,7 +76,7 @@
   width: 100%;
   padding: 16px 12px;
   border-radius: 8px;
-  border: 1px solid rgba(33, 33, 33, 0.3-0.4);
+  border: 1px solid rgba(33, 33, 33, 0.3);
   font-weight: 500;
   font-size: 20px;
   line-height: 100%;
@@ -114,6 +97,7 @@
   font-size: 16px;
   line-height: 100%;
   cursor: pointer;
+  border-style: none;
 }
 
 .modal__save-btn:hover {
