@@ -10,6 +10,11 @@
   display: block;
   border-radius: 8px;
   margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.card__image:hover {
+  opacity: 0.8;
 }
 
 .card__content {
@@ -24,8 +29,10 @@
   height: 20px;
   border: none;
   background-color: transparent;
-  opacity: 40%;
+  opacity: 0.4;
   cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card__like-btn:hover {
@@ -51,6 +58,8 @@
   cursor: pointer;
   top: 10px;
   right: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card__delete-btn:hover {
@@ -65,9 +74,8 @@
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
   margin: 0;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 627px) {
