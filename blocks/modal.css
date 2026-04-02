@@ -1,4 +1,5 @@
 .modal {
+  z-index: 1111;
   visibility: hidden;
   opacity: 0;
   background-color: #00000080;

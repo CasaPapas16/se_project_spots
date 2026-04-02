@@ -49,6 +49,7 @@
 }
 
 .card__delete-btn {
+  z-index: 1;
   background-image: url(../images/Delete-logo.svg);
   width: 32px;
   height: 32px;
