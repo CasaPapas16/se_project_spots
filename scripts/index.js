@@ -157,3 +157,20 @@ initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
 });
+
+window.addEventListener("click", function (evt) {
+  if (evt.target === editProfileModal) {
+    closeModal(editProfileModal);
+  } else if (evt.target === newPostModal) {
+    closeModal(newPostModal);
+  }
+});
+
+document.addEventListener("keydown", function (evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_is-opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+});
