@@ -122,6 +122,11 @@
   font-size: 16px;
   font-weight: 500;
   margin-top: 8px;
+  visibility: hidden;
+}
+
+.modal__error_visible {
+  visibility: visible;
 }
 
 .modal__save-btn {
