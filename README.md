@@ -18,8 +18,12 @@ This begining of the project takes a look at uploading a picture and leaving a d
 
 I have implemented a grid layout for the pictures that will be equal size to each other, also having the dynamic change to the grid when reaching different viewing sizes from different devices being used. This is to ensure use on various platforms. Have a look [here]https://casapapas16.github.io/se_project_spots/
 
-[here] is a link to a brief overview video about the project and challenges i facced when building it.
+**Form Modal**
+
+I have been working on using JavaScript to impliment forms and input data for the user to have the ablility to share and leave a description of what the post is about. As well as having the form being able to pop up and giving the user multiple ways to close out the form.
+
+[here] is a few links for a brief overview talking about the project and challenges i facced when building it.
 [Adrian Sandoval project pitch 1] https://drive.google.com/file/d/1nApCNiLnFXG-Xelj2zLzumN7Gc9O5ZAT/view?usp=sharing
-[Adrian Sandoval project pitch 2]
+[Adrian Sandoval project pitch 2] https://www.loom.com/share/1591ba44851c4b1a89cee50c267d4396
 
 I look forward to continue growing this project for everyone to see and use.

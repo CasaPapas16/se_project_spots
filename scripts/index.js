@@ -158,11 +158,11 @@ initialCards.forEach(function (item) {
   cardsList.append(cardElement);
 });
 
-window.addEventListener("click", function (evt) {
-  if (evt.target === editProfileModal) {
-    closeModal(editProfileModal);
-  } else if (evt.target === newPostModal) {
-    closeModal(newPostModal);
+window.addEventListener("click", (evt) => {
+  const openedModal = document.querySelector(".modal_opened");
+
+  if (openedModal && evt.target === openedModal) {
+    closeModal(openedModal);
   }
 });
 
