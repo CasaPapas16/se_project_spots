@@ -3,6 +3,8 @@
   padding: 60px 0;
   display: flex;
   justify-content: center;
+  width: 100%;
+  align-items: center;
 }
 
 .footer__copyright {

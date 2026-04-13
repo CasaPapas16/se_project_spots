@@ -142,11 +142,6 @@
   border-style: none;
 }
 
-.modal__save-btn:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-
 .modal__save-btn_inactive {
   opacity: 0.5;
 }
