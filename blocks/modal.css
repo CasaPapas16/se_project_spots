@@ -62,11 +62,6 @@
   opacity: 0.4;
 }
 
-.modal__close-btn:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-
 .modal__title {
   margin: 0 0 32px;
   font-weight: 500;
@@ -142,8 +137,14 @@
   border-style: none;
 }
 
+.modal__save-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 .modal__save-btn_inactive {
   opacity: 0.5;
+  pointer-events: none;
 }
 
 .modal__image {
