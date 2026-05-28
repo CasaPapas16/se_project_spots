@@ -21,7 +21,7 @@ api
     console.log(cards);
     profileNameEl.textContent = user.name;
     profileDescriptionEl.textContent = user.about;
-    //profileAvatarEl.src = user.avatar;
+    profileAvatarEl.src = user.avatar;
 
     cards.forEach(function (item) {
       const cardElement = getCardElement(item);
@@ -30,6 +30,7 @@ api
   })
   .catch(console.error);
 
+//edit profile element
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileForm = document.forms.editProfileForm;
@@ -40,6 +41,7 @@ const editProfileDescriptionInput = editProfileModal.querySelector(
   "#profile-description-input",
 );
 
+//card form elements
 const newPostBtn = document.querySelector(".profile__add-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const addCardForm = document.forms.newPostForm;
@@ -47,6 +49,7 @@ const newPostSaveBtn = newPostModal.querySelector(".modal__save-btn");
 const newPostImageLink = newPostModal.querySelector("#card-image-input");
 const newPostCardCaption = newPostModal.querySelector("#card-caption-input");
 
+//preview image
 const previewModal = document.querySelector("#preview-modal");
 const previewImageEl = previewModal.querySelector(".modal__image");
 const previewCaptionEl = previewModal.querySelector(".modal__caption");
@@ -54,6 +57,15 @@ const previewCaptionEl = previewModal.querySelector(".modal__caption");
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 const closeButtons = document.querySelectorAll(".modal__close-btn");
+const avatarModalBtn = document.querySelector(".profile__avatar-btn");
+
+//avatar form elements
+const avatarModal = document.querySelector("#edit-avatar-modal");
+const avatarForm = document.forms.editAvatarForm;
+const avatarSubmitBtn = avatarModal.querySelector(".modal__save-btn");
+const avatarModalCloseBtn = avatarModal.querySelector(".modal__close-btn");
+const avatarInput = avatarModal.querySelector("#profile-avatar-input");
+const profileAvatarEl = document.querySelector(".profile__avatar");
 
 const cardTemplate = document
   .querySelector("#card-template")
@@ -136,6 +148,11 @@ newPostBtn.addEventListener("click", function () {
   openModal(newPostModal);
 });
 
+avatarModalBtn.addEventListener("click", () => {
+  openModal(avatarModal);
+});
+avatarForm.addEventListener("submit", handleAvatarSubmit);
+
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
   api
@@ -167,6 +184,17 @@ function handleAddCardSubmit(evt) {
   disableButton(newPostSaveBtn, settings);
   closeModal(newPostModal);
   addCardForm.reset();
+}
+
+function handleAvatarSubmit(evt) {
+  evt.preventDefault();
+  api
+    .editAvatarInfo(avatarInput.value)
+    .then((data) => {
+      profileAvatarEl.src = data.avatar;
+      closeModal(avatarModal);
+    })
+    .catch(console.error);
 }
 
 addCardForm.addEventListener("submit", handleAddCardSubmit);

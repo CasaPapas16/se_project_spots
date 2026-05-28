@@ -24,6 +24,12 @@
   justify-content: center;
   visibility: hidden;
   background-color: #000000;
+  padding: 0px;
+  border-radius: 6px;
+}
+
+.profile__pencil-icon {
+  padding: 12px;
 }
 
 .profile__avatar-container:hover .profile__avatar-btn {
@@ -37,6 +43,7 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 1;
+  padding-bottom: 12px;
 }
 
 .profile__column {
@@ -122,6 +129,9 @@
   display: flex;
 }
 
+.profile__avatar {
+}
+
 @media screen and (max-width: 627px) {
   .profile {
     flex-direction: column;
@@ -139,10 +149,16 @@
     width: 23px;
     border-radius: 6px;
     margin: 52px 52px 4px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile__pencil-icon {
+    padding: 0;
   }
 
   .profile__avatar-btn::after {
-    content: "";
+    display: none;
   }
 
   .profile__avatar {
