@@ -127,8 +127,16 @@ function handleDeleteCard(cardElement, cardId) {
   openModal(deleteModal);
 }
 
-function handleLike(evt) {
-  evt.target.classList.toggle("card__like-btn_active");
+function handleLike(evt, id) {
+  const likeButton = evt.target;
+  const isLiked = likeButton.classList.contains("card__like-btn_active");
+
+  api
+    .toggleLike(id, isLiked)
+    .then(() => {
+      likeButton.classList.toggle("card__like-btn_active");
+    })
+    .catch(console.error);
 }
 
 function handleImageClick(data) {
@@ -149,9 +157,9 @@ function getCardElement(data) {
   cardImageEl.alt = data.name;
   cardTitleEl.textContent = data.name;
 
-  likeButton.addEventListener("click", handleLike);
-  deleteButton.addEventListener("click", (evt) =>
-    handleDeleteCard(cardElement, data),
+  likeButton.addEventListener("click", (evt) => handleLike(evt, data._id));
+  deleteButton.addEventListener("click", () =>
+    handleDeleteCard(cardElement, data._id),
   );
   cardImageEl.addEventListener("click", () => handleImageClick(data));
 
@@ -221,6 +229,7 @@ function handleAvatarSubmit(evt) {
     .then((data) => {
       profileAvatarEl.src = data.avatar;
       closeModal(avatarModal);
+      avatarForm.reset();
     })
     .catch(console.error);
 }
