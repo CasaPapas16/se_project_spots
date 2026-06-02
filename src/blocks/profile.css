@@ -64,6 +64,7 @@
   -webkit-box-orient: vertical;
   max-width: 420px;
   color: #212121;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .profile__description {

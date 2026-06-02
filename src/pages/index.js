@@ -5,6 +5,7 @@ import {
   resetValidation,
   disableButton,
 } from "../scripts/validation.js";
+import { setButtonText } from "../utils/helpers.js";
 import Api from "../utils/Api.js";
 
 const api = new Api({
@@ -112,13 +113,17 @@ function handleOverlayClick(evt) {
 
 function handleDeleteSubmit(evt) {
   evt.preventDefault();
+  setButtonText(evt.submitter, true, "Delete", "Deleting...");
   api
     .deleteCard(selectedCardId)
     .then(() => {
       selectedCard.remove();
       closeModal(deleteModal);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      setButtonText(evt.submitter, false, "Delete", "Deleting...");
+    });
 }
 
 function handleDeleteCard(cardElement, cardId) {
@@ -188,6 +193,9 @@ avatarForm.addEventListener("submit", handleAvatarSubmit);
 
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
+
+  setButtonText(evt.submitter, true);
+
   api
     .editUserInfo({
       name: editProfileNameInput.value,
@@ -198,13 +206,18 @@ function handleEditProfileSubmit(evt) {
       profileDescriptionEl.textContent = data.about;
       closeModal(editProfileModal);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      setButtonText(evt.submitter, false);
+    });
 }
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
+
+  setButtonText(evt.submitter, true);
 
   api
     .addNewCard({
@@ -219,11 +232,17 @@ function handleAddCardSubmit(evt) {
       closeModal(newPostModal);
       addCardForm.reset();
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      setButtonText(evt.submitter, false);
+    });
 }
 
 function handleAvatarSubmit(evt) {
   evt.preventDefault();
+
+  setButtonText(evt.submitter, true);
+
   api
     .editAvatarInfo(avatarInput.value)
     .then((data) => {
@@ -231,7 +250,10 @@ function handleAvatarSubmit(evt) {
       closeModal(avatarModal);
       avatarForm.reset();
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      setButtonText(evt.submitter, false);
+    });
 }
 
 addCardForm.addEventListener("submit", handleAddCardSubmit);
