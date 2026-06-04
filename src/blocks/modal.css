@@ -272,8 +272,13 @@
     top: -48px;
     right: 0;
   }
-}
 
-.modal__image {
-  max-width: unset;
+  .modal__close-btn_type_delete {
+    top: -48px;
+    right: 0;
+  }
+
+  .modal__image {
+    max-width: unset;
+  }
 }
