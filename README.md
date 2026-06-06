@@ -25,5 +25,6 @@ I have been working on using JavaScript to impliment forms and input data for th
 [here] is a few links for a brief overview talking about the project and challenges i facced when building it.
 [Adrian Sandoval project pitch 1] https://drive.google.com/file/d/1nApCNiLnFXG-Xelj2zLzumN7Gc9O5ZAT/view?usp=sharing
 [Adrian Sandoval project pitch 2] https://www.loom.com/share/1591ba44851c4b1a89cee50c267d4396
+[Adrian Sandoval project spots final]https://www.loom.com/share/b740f55ee7d747128c504ceb3952fb3c
 
 I look forward to continue growing this project for everyone to see and use.
