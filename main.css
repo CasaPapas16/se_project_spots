@@ -148,13 +148,13 @@ template {
   font-family: Poppins;
   font-style: normal;
   font-weight: 400;
-  src: url(35d26b781dc5fda684cc.ttf) format("truetype");
+  src: url(assets/35d26b781dc5fda684cc.ttf) format("truetype");
 }
 @font-face {
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
-  src: url(/assets/673ed42382ab264e0bf5.ttf) format("truetype");
+  src: url(assets/673ed42382ab264e0bf5.ttf) format("truetype");
 }
 .page {
   background-color: #fcf5e5;
@@ -368,7 +368,7 @@ template {
 }
 .card__like-btn {
   background-color: transparent;
-  background-image: url(/assets/04863a0069d739082f92.svg);
+  background-image: url(assets/04863a0069d739082f92.svg);
   background-position: 50%;
   background-repeat: no-repeat;
   border: none;
@@ -381,7 +381,7 @@ template {
   opacity: 1;
 }
 .card__like-btn_active {
-  background-image: url(/assets/0bb42f0e46b29342b0f1.svg);
+  background-image: url(assets/0bb42f0e46b29342b0f1.svg);
   opacity: 1;
 }
 .card__like-btn_active:hover {
@@ -389,7 +389,7 @@ template {
 }
 .card__delete-btn {
   background-color: transparent;
-  background-image: url(/assets/0bb42f0e46b29342b0f1.svg);
+  background-image: url(assets/0bb42f0e46b29342b0f1.svg);
   background-position: 50%;
   background-repeat: no-repeat;
   border: none;
@@ -402,7 +402,7 @@ template {
   z-index: 1;
 }
 .card__delete-btn:hover {
-  background-image: url(/assets/58c61e0eac124c5e75fa.svg);
+  background-image: url(assets/58c61e0eac124c5e75fa.svg);
 }
 .card__title {
   font-family: Poppins, Arial, Helvetica, sans-serif;
@@ -501,7 +501,7 @@ template {
 }
 .modal__close-btn {
   background-color: #fff;
-  background-image: url(/assets/f6cc26ee8cfe1be849aa.png);
+  background-image: url(assets/f6cc26ee8cfe1be849aa.png);
   border-style: none;
   cursor: pointer;
   height: 40px;
@@ -513,7 +513,7 @@ template {
 }
 .modal__close-btn_type_preview {
   background-color: transparent;
-  background-image: url(/assets/2a6d443422ae27e8b633.svg);
+  background-image: url(assets/2a6d443422ae27e8b633.svg);
   cursor: pointer;
   opacity: 1;
   right: -52.5px;
@@ -653,7 +653,7 @@ template {
 }
 .modal__close-btn_type_delete {
   background-color: transparent;
-  background-image: url(/assets/2a6d443422ae27e8b633.svg);
+  background-image: url(assets/2a6d443422ae27e8b633.svg);
   cursor: pointer;
   opacity: 1;
   right: -52.5px;
